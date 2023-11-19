@@ -1,0 +1,39 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<div>
+  <p>Single file selection</p>
+  <input
+    type="file"
+    name="file"
+    id="singleFile"
+    (change)="selectDirectory(files.files)"
+    #files
+  />
+</div>
+
+<div>
+  <p>Multipe File Selection</p>
+  <input
+    type="file"
+    name="file[]"
+    id="multipleFile"
+    multiple
+    (change)="selectDirectory(multipleFiles.files)"
+    #multipleFiles
+  />
+</div>
+
+<div>
+  <p>Select folder</p>
+  <input
+    type="file"
+    name="folder"
+    id="folder"
+    multiple
+    webkitdirectory
+    (change)="selectDirectory(directory.files)"
+    #directory
+  />
+</div>
